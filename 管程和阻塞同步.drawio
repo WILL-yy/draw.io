@@ -1,1 +1,51 @@
-<mxfile host="app.diagrams.net" modified="2022-10-20T12:36:52.150Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47" version="20.4.1" etag="wfeVOdUwP9iHDLh_01JD" type="github"><diagram id="RycZ5OX3ZmzhUxBAP3NQ">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-10-21T00:46:50.001Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.47" etag="-0aktDkpuQ_8z3Rs9HJw" version="20.4.1" type="github">
+  <diagram id="RycZ5OX3ZmzhUxBAP3NQ" name="第 1 页">
+    <mxGraphModel dx="1038" dy="585" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="O5UIGZkpNlx5k8qXSMEV-4" target="O5UIGZkpNlx5k8qXSMEV-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-4" value="Reader.lock()" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;fontSize=16;fillColor=none;strokeColor=#FF2E5F;" vertex="1" parent="1">
+          <mxGeometry x="100" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-6" value="Writer.lock()" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;fontSize=16;fillColor=none;strokeColor=#FF2E5F;" vertex="1" parent="1">
+          <mxGeometry x="360" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=16;" edge="1" parent="1" source="O5UIGZkpNlx5k8qXSMEV-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-7" value="Reader.lock()" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=5;fontSize=16;fillColor=none;strokeColor=#FF2E5F;" vertex="1" parent="1">
+          <mxGeometry x="470" y="50" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-10" value="readAcquires != readReleases" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-11" value="writer = true" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="325" y="235" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-12" value="&lt;font color=&quot;#ff404c&quot;&gt;&lt;b&gt;wait&amp;nbsp;&lt;/b&gt; &lt;/font&gt;readAcquires == readReleases" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="311" y="260" width="279" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-13" value="&lt;font color=&quot;#ff5e8f&quot;&gt;&lt;b&gt;wait&lt;/b&gt; &lt;/font&gt;write == false&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="534" y="160" width="153" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-18" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;fontSize=16;entryX=0.43;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="O5UIGZkpNlx5k8qXSMEV-13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="530" y="260" as="sourcePoint" />
+            <mxPoint x="540" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-20" value="发生死锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="555" y="235" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="O5UIGZkpNlx5k8qXSMEV-21" value="进行锁升级&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="238" y="166" width="98" height="31" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
